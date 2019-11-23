@@ -1,4 +1,4 @@
-# Apache mod_proxy banalcer bug test case 
+# Apache mod_proxy balancer bug test case 
 
 This is a test case to see the (empty) POST request that the load balancer send to a live node after that, with the same request, the balances found a failure server.
 
