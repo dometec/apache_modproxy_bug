@@ -3,10 +3,11 @@
 This is a test case to see the (empty) POST request that the load balancer send to a live node after that, with the same request, the balances found a failure server.
 
 # Bug Description
-I configure Apache HTTPd as a load balancer to forward request towards two instances of ApplicationServer, using mod_proxy, mod_proxy_balancer and mod_lbmethod_byrequests.
-I started only on ApplicationServer, when the mod_proxy send a request to power off node understand that this is not alive and send the same request to other (live) node, but with an empty **body**.
+I've configured an Apache HTTPd as a load balancer to forward request towards two instances of ApplicationServer, using mod_proxy, mod_proxy_balancer and mod_lbmethod_byrequests. 
+I started only one ApplicationServer.
+When the mod_proxy sends a request to power off node understand that this is not alive and send the same request to other (live) node, but with an empty **body**.
 
-The bosy of POST Request is less 2KB (30 byte in this test case).
+The body of the POST Request is less 2KB (30 byte in this test case).
 
 # Expected Behaviour
 The second POST request, to the live node, SHOULD have the body.
