@@ -14,7 +14,7 @@ The second POST request, to the live node, SHOULD have the body.
 
 # Steps to reproduce
 I've prepared a test case with a Apache HTTPd and an application server (wildfly) using container and docker compose. Clone the repository and start the composer with:
-- docker-compose --build up
+- docker-compose up --build
 
 When the Apache HTTPd and Wildfly are started, on another shell find the IP Address of Apache:
 - docker inspect dockerstack_apache_1 | grep IPAddress | tail -n 1
